@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="css/style.css"></script>
+</head>
+<body>
+
+<h2>Calculater Form</h2>
+<div class="container">
+ 
+  <div class="inputs">
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Value</label>
+      <input type="text" class="form-control amount" name="printcost"  id="n1" placeholder="value">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Value 2</label>
+      <input type="text" class="form-control amount" name="digitalcost" id="n2" placeholder="Value">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Answer</label>
+    <input type="text" class="form-control" name="totalordercost" id="result" placeholder="Answer">
+  </div>
+  
+  
+    
+   
+  </div>
+ 
+  
+   <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+           
+        </select>
+  
+  <button onclick="calc();">=</button>
+       
+  
+<script>
+function calc()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value);
+                var n2 = parseFloat(document.getElementById('n2').value);
+
+                var oper = document.getElementById('operators').value;
+
+                if(oper === '+')
+                {
+                    document.getElementById('result').value = n1+n2;
+                }
+
+                if(oper === '-')
+                {
+                    document.getElementById('result').value = n1-n2;
+                }
+
+                
+            }
+
+        </script>
+
+
+</body>
+</html>
